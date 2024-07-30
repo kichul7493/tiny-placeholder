@@ -14,5 +14,5 @@ export const PlaceholderImage = ({ options }: PlaceholderImageProps) => {
     setImageUrl(canvas.getDataURL())
   }, [options])
 
-  return <img src={imageUrl} alt="Placeholder" />
+  return <img width={options?.width} height={options?.height} src={imageUrl} alt="Placeholder" />
 }
