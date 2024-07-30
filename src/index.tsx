@@ -1,5 +1,3 @@
-const Test = () => {
-  return <div>Test</div>
-}
-
-export default Test
+export { PlaceholderImage, PlaceholderImageDownload } from './components/index'
+export { PlaceholderImageGenerator } from './core/index'
+export type { PlaceholderOptions, Shape, BorderStyle } from './core/index'
