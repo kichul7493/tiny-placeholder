@@ -2,21 +2,96 @@
 
 ## Table of Contents
 
-- [프로젝트 개요](#프로젝트-개요)
-- [설치 방법 / 사용 방법 ](#설치-방법--사용-방법)
-- [라이센스 표기](#라이선스-표기)
+- [Project Overview](#project-overview)
+- [Installation / Usage](#installation--usage)
+- [License](#license)
 
-## 프로젝트 개요
+## Project Overview
 
-간단한 플레이스홀더 이미지가 필요할 때 사용할 수 있는 아주 작은 라이브러리.
+This is a tiny library for use when you need simple placeholder images.  
+It is available for use in React projects.
 
-### 기능
+The library provides two components:
 
-- 원하는 넓이와 높이를 설정할 수 있다.
-- 원하는 형태(사각형, 삼각형, 원형)를 설정할 수 있다.
-- 원하는 색상을 배경으로 정할 수 있다.
-- 원하는 글씨를 넣을 수 있다.
+- `PlaceholderImage` component for displaying placeholder images
+- `PlaceholderImageDownloader` component for downloading placeholder images
 
-## 설치 방법 / 사용 방법
+### Features
 
-## 라이선스 표기
+Both components offer the following features:
+
+- Set desired width and height.
+- Choose desired shape (rectangle, triangle, circle).
+- Set desired background color.
+- Insert text in the center of the image with desired color and size.
+
+## Installation / Usage
+
+npm:
+
+```bash
+$ npm install tiny-placeholder
+```
+
+yarn:
+
+```bash
+$ yarn add tiny-placeholder
+```
+
+pnpm:
+
+```bash
+$ pnpm add tiny-placeholder
+```
+
+You can install tiny-placeholder in your project using a package manager.
+
+Example code:
+
+```tsx
+const options = createPlaceholderOptions({
+  width: 200,
+  height: 200,
+  backgroundColor: '#cccccc',
+  textColor: '#333333',
+  text: 'Placeholder',
+  fontSize: 20,
+  fontFamily: 'Arial, sans-serif',
+  borderWidth: 0,
+  borderColor: '#000000',
+  borderStyle: 'solid',
+  borderRadius: 0,
+  shape: 'rectangle',
+})
+
+<PlaceholderImage
+  options={options}
+  alt="This is a placeholder image."
+/>
+
+<PlaceholderImageDownloader
+  options={options}
+  component={<Button/>}
+/>
+
+const Button = () => {
+  return <button>Download</button>
+}
+```
+
+### 1. createPlaceholderOptions
+
+Use the `createPlaceholderOptions` function to generate `options` with type support.
+
+### 2. PlaceholderImage
+
+The `PlaceholderImage` component provides an image tag with the configured `options` props.
+
+### 3. PlaceholderImageDownloader
+
+The `PlaceholderImageDownloader` component provides an anchor (`a`) tag to download the generated image using the configured `options` props. You can define the download button's appearance using the `component` prop.
+
+## License
+
+This project is licensed under the terms of the MIT license.
