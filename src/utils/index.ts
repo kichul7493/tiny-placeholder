@@ -1,1 +1,1 @@
-export { createPlaceholderOptions } from './createPlaceholderOptions/createPlaceholderOptions'
+export { createPlaceholderOptions } from './createPlaceholderOptions'

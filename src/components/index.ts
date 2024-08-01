@@ -1,2 +1,2 @@
-export { PlaceholderImage } from './PlaceholderImage/PlaceholderImage'
-export { PlaceholderImageDownload } from './PlaceholderImageDownloader/PlaceholderImageDownloader'
+export { PlaceholderImage } from './PlaceholderImage'
+export { PlaceholderImageDownload } from './PlaceholderImageDownloader'

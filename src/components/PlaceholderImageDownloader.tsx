@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { PlaceholderImageGenerator, PlaceholderOptions } from '../../core'
+import { PlaceholderImageGenerator } from '../core'
+import { PlaceholderOptions } from '../types'
 
 interface PlaceholderImageDownloadProps {
   options?: Partial<PlaceholderOptions>

@@ -1,21 +1,4 @@
-export type Shape = 'rectangle' | 'circle' | 'triangle'
-export type BorderStyle = 'solid' | 'dashed' | 'dotted'
-
-export interface PlaceholderOptions {
-  canvas?: HTMLCanvasElement
-  width: number
-  height: number
-  backgroundColor: string
-  textColor: string
-  text: string
-  fontSize: number
-  fontFamily: string
-  borderWidth: number
-  borderColor: string
-  borderStyle: BorderStyle
-  borderRadius: number
-  shape: Shape
-}
+import { BorderStyle, PlaceholderOptions } from '../types'
 
 export class PlaceholderImageGenerator {
   private canvas: HTMLCanvasElement
@@ -31,12 +14,12 @@ export class PlaceholderImageGenerator {
 
     const ctx = this.canvas.getContext('2d')
     if (!ctx) {
-      throw new Error('Canvas rendering context is not supported')
+      throw new Error('CanvasRenderingContext2D를 가져올 수 없습니다.')
     }
     this.ctx = ctx
     this.options = {
-      width: 300,
-      height: 150,
+      width: 100,
+      height: 100,
       backgroundColor: '#cccccc',
       textColor: '#333333',
       text: 'Placeholder',
@@ -132,6 +115,10 @@ export class PlaceholderImageGenerator {
   }
 
   private drawCircle(x: number, y: number, radius: number): void {
+    if (x !== y) {
+      throw new Error('타원은 지원하지 않습니다.')
+    }
+
     this.ctx.beginPath()
     this.ctx.arc(x, y, radius, 0, 2 * Math.PI)
     this.ctx.closePath()
