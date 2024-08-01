@@ -1,3 +1,4 @@
+import { defaultOptions } from '../constants'
 import { BorderStyle, PlaceholderOptions } from '../types'
 
 export class PlaceholderImageGenerator {
@@ -18,18 +19,7 @@ export class PlaceholderImageGenerator {
     }
     this.ctx = ctx
     this.options = {
-      width: 100,
-      height: 100,
-      backgroundColor: '#cccccc',
-      textColor: '#333333',
-      text: 'Placeholder',
-      fontSize: 20,
-      fontFamily: 'Arial, sans-serif',
-      borderWidth: 0,
-      borderColor: '#000000',
-      borderStyle: 'solid',
-      borderRadius: 0,
-      shape: 'rectangle',
+      ...defaultOptions,
       ...options,
     }
 
@@ -145,7 +135,14 @@ export class PlaceholderImageGenerator {
     }
   }
 
-  private drawText(text: string, x: number, y: number, fontSize: number, fontFamily: string, color: string): void {
+  private drawText(
+    text: string,
+    x: number,
+    y: number,
+    fontSize: number,
+    fontFamily: string,
+    color: string | CanvasGradient | CanvasPattern,
+  ): void {
     this.ctx.fillStyle = color
     this.ctx.font = `${fontSize}px ${fontFamily}`
     this.ctx.textAlign = 'center'
