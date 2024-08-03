@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import useInput from './useInput'
-import { BorderStyle, PlaceholderImageDownload, Shape } from 'tiny-placeholder'
+import { BorderStyle, PlaceholderImage, PlaceholderImageDownload, Shape } from 'tiny-placeholder'
 
 function App() {
   const [width, setWidth] = useInput('200')
@@ -28,6 +28,42 @@ function App() {
   return (
     <main>
       <h1>Placeholder image downloader</h1>
+
+      <PlaceholderImage
+        options={{
+          width: Number(width),
+          height: Number(height),
+          backgroundColor,
+          textColor,
+          text,
+          fontSize: Number(fontSize),
+          fontFamily,
+          borderWidth: Number(borderWidth),
+          borderColor,
+          borderStyle,
+          borderRadius: Number(borderRadius),
+          shape,
+        }}
+      />
+
+      <div>
+        <PlaceholderImageDownload
+          options={{
+            width: Number(width),
+            height: Number(height),
+            backgroundColor,
+            textColor,
+            text,
+            fontSize: Number(fontSize),
+            fontFamily,
+            borderWidth: Number(borderWidth),
+            borderColor,
+            borderStyle,
+            borderRadius: Number(borderRadius),
+            shape,
+          }}
+        />
+      </div>
 
       <section>
         <form onSubmit={(e) => e.preventDefault()}>
@@ -90,25 +126,6 @@ function App() {
           </label>
         </form>
       </section>
-
-      <div>
-        <PlaceholderImageDownload
-          options={{
-            width: Number(width),
-            height: Number(height),
-            backgroundColor,
-            textColor,
-            text,
-            fontSize: Number(fontSize),
-            fontFamily,
-            borderWidth: Number(borderWidth),
-            borderColor,
-            borderStyle,
-            borderRadius: Number(borderRadius),
-            shape,
-          }}
-        />
-      </div>
     </main>
   )
 }
