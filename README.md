@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - [Project Overview](#project-overview)
-- [Installation / Usage](#installation--usage)
 - [Library List](#library-list)
 - [License](#license)
 
@@ -11,7 +10,7 @@
 
 This is a tiny library for use when you need simple placeholder images.
 
-### Features
+## Features
 
 Both components offer the following features:
 
