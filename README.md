@@ -92,6 +92,10 @@ The `PlaceholderImage` component provides an image tag with the configured `opti
 
 The `PlaceholderImageDownloader` component provides an anchor (`a`) tag to download the generated image using the configured `options` props. You can define the download button's appearance using the `component` prop.
 
+### [example site](https://tiny-placeholder-9ndd.vercel.app/)
+
+code here : ./examples/placholder-image-downloader
+
 ## License
 
 This project is licensed under the terms of the MIT license.
