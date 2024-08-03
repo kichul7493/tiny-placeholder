@@ -15,7 +15,7 @@ export class PlaceholderImageGenerator {
 
     const ctx = this.canvas.getContext('2d')
     if (!ctx) {
-      throw new Error('CanvasRenderingContext2D를 가져올 수 없습니다.')
+      throw new Error('Failed to obtain CanvasRenderingContext2D.')
     }
     this.ctx = ctx
     this.options = {
@@ -106,7 +106,7 @@ export class PlaceholderImageGenerator {
 
   private drawCircle(x: number, y: number, radius: number): void {
     if (x !== y) {
-      throw new Error('타원은 지원하지 않습니다.')
+      throw new Error('Ellipses are not supported.')
     }
 
     this.ctx.beginPath()
