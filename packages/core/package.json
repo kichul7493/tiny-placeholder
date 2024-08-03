@@ -1,0 +1,32 @@
+{
+  "name": "@tiny-placeholder/core",
+  "version": "1.0.0",
+  "author": {
+    "name": "Kichul Kim",
+    "email": "kichul7493@gmail.com"
+  },
+  "keywords": [
+    "placeholder"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/core.umd.cjs",
+  "module": "dist/core.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/core.js",
+      "require": "./dist/core.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "pnpm clean && tsc && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vite-plugin-dts": "4.0.0-beta.1"
+  }
+}
