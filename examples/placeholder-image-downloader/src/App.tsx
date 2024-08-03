@@ -4,17 +4,17 @@ import useInput from './useInput'
 import { BorderStyle, PlaceholderImageDownload, Shape } from 'tiny-placeholder'
 
 function App() {
-  const [width, setWidth] = useInput('600')
+  const [width, setWidth] = useInput('200')
   const [height, setHeight] = useInput('200')
-  const [backgroundColor, setBackgroundColor] = useInput('#ccc')
-  const [textColor, setTextColor] = useInput('#000')
-  const [text, setText] = useInput('Placeholder Image')
-  const [fontSize, setFontSize] = useInput('16')
-  const [fontFamily, setFontFamily] = useInput('Arial')
-  const [borderWidth, setBorderWidth] = useInput('2')
-  const [borderColor, setBorderColor] = useInput('#000')
+  const [backgroundColor, setBackgroundColor] = useInput('#cccccc')
+  const [textColor, setTextColor] = useInput('#333333')
+  const [text, setText] = useInput('Placeholder')
+  const [fontSize, setFontSize] = useInput('20')
+  const [fontFamily, setFontFamily] = useInput('Arial, sans-serif')
+  const [borderWidth, setBorderWidth] = useInput('0')
+  const [borderColor, setBorderColor] = useInput('#000000')
   const [borderStyle, setBorderStyle] = useState<BorderStyle>('solid')
-  const [borderRadius, setBorderRadius] = useInput('12')
+  const [borderRadius, setBorderRadius] = useInput('0')
   const [shape, setShape] = useState<Shape>('rectangle')
 
   const handleBorderStyle = (e: React.ChangeEvent<HTMLSelectElement>) => {
