@@ -2,7 +2,7 @@ import { PlaceholderOptions } from '../types'
 import { Placeholder } from './Placeholder'
 
 export class RectanglePlaceholder extends Placeholder {
-  constructor(options: Partial<PlaceholderOptions> = {}) {
+  constructor(options: PlaceholderOptions) {
     super(options)
   }
 

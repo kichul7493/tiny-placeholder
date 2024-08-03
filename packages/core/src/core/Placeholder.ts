@@ -1,4 +1,3 @@
-import { defaultOptions } from '../constants'
 import { BorderStyle, PlaceholderOptions } from '../types'
 
 export abstract class Placeholder {
@@ -6,7 +5,7 @@ export abstract class Placeholder {
   protected ctx: CanvasRenderingContext2D
   protected options: PlaceholderOptions
 
-  constructor(options: Partial<PlaceholderOptions> = {}) {
+  constructor(options: PlaceholderOptions) {
     if (options.canvas) {
       this.canvas = options.canvas
     } else {
@@ -19,7 +18,6 @@ export abstract class Placeholder {
     }
     this.ctx = ctx
     this.options = {
-      ...defaultOptions,
       ...options,
     }
 

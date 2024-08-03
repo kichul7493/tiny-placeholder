@@ -1,3 +1,4 @@
+import { defaultOptions } from '../constants'
 import { PlaceholderOptions } from '../types'
 import { CirclePlaceholder } from './CirclePlaceholder'
 import { Placeholder } from './Placeholder'
@@ -8,17 +9,22 @@ export class PlaceholderImageGenerator {
   private placeholder: Placeholder
 
   constructor(options: Partial<PlaceholderOptions> = {}) {
-    const { shape } = options
+    const mergeOptions = {
+      ...defaultOptions,
+      ...options,
+    }
+
+    const { shape } = mergeOptions
 
     switch (shape) {
       case 'circle':
-        this.placeholder = new CirclePlaceholder(options)
+        this.placeholder = new CirclePlaceholder(mergeOptions)
         break
       case 'triangle':
-        this.placeholder = new TrianglePlaceholder(options)
+        this.placeholder = new TrianglePlaceholder(mergeOptions)
         break
       default:
-        this.placeholder = new RectanglePlaceholder(options)
+        this.placeholder = new RectanglePlaceholder(mergeOptions)
     }
   }
 
