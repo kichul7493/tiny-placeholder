@@ -1,10 +1,10 @@
 import { defaultOptions } from '../constants'
 import { BorderStyle, PlaceholderOptions } from '../types'
 
-export class PlaceholderImageGenerator {
-  private canvas: HTMLCanvasElement
-  private ctx: CanvasRenderingContext2D
-  private options: PlaceholderOptions
+export abstract class Placeholder {
+  protected canvas: HTMLCanvasElement
+  protected ctx: CanvasRenderingContext2D
+  protected options: PlaceholderOptions
 
   constructor(options: Partial<PlaceholderOptions> = {}) {
     if (options.canvas) {
@@ -38,8 +38,6 @@ export class PlaceholderImageGenerator {
       borderWidth,
       borderColor,
       borderStyle,
-      borderRadius,
-      shape,
     } = this.options
 
     this.canvas.width = width
@@ -48,24 +46,7 @@ export class PlaceholderImageGenerator {
     // Clear canvas
     this.ctx.clearRect(0, 0, width, height)
 
-    // Draw shape
-    switch (shape) {
-      case 'circle':
-        this.drawCircle(width / 2, height / 2, Math.min(width, height) / 2 - borderWidth)
-        break
-      case 'triangle':
-        this.drawTriangle(
-          width / 2,
-          borderWidth,
-          borderWidth,
-          height - borderWidth,
-          width - borderWidth,
-          height - borderWidth,
-        )
-        break
-      default: // rectangle
-        this.drawRectangle(borderWidth, borderWidth, width - 2 * borderWidth, height - 2 * borderWidth, borderRadius)
-    }
+    this.drawShape()
 
     // Set clipping region
     this.ctx.save()
@@ -90,37 +71,7 @@ export class PlaceholderImageGenerator {
     this.drawText(text, width / 2, height / 2, fontSize, fontFamily, textColor)
   }
 
-  private drawRectangle(x: number, y: number, width: number, height: number, borderRadius: number = 0): void {
-    this.ctx.beginPath()
-    if (borderRadius > 0) {
-      this.ctx.moveTo(x + borderRadius, y)
-      this.ctx.arcTo(x + width, y, x + width, y + height, borderRadius)
-      this.ctx.arcTo(x + width, y + height, x, y + height, borderRadius)
-      this.ctx.arcTo(x, y + height, x, y, borderRadius)
-      this.ctx.arcTo(x, y, x + width, y, borderRadius)
-    } else {
-      this.ctx.rect(x, y, width, height)
-    }
-    this.ctx.closePath()
-  }
-
-  private drawCircle(x: number, y: number, radius: number): void {
-    if (x !== y) {
-      throw new Error('Ellipses are not supported.')
-    }
-
-    this.ctx.beginPath()
-    this.ctx.arc(x, y, radius, 0, 2 * Math.PI)
-    this.ctx.closePath()
-  }
-
-  private drawTriangle(x1: number, y1: number, x2: number, y2: number, x3: number, y3: number): void {
-    this.ctx.beginPath()
-    this.ctx.moveTo(x1, y1)
-    this.ctx.lineTo(x2, y2)
-    this.ctx.lineTo(x3, y3)
-    this.ctx.closePath()
-  }
+  abstract drawShape(): void
 
   private setBorderStyle(borderStyle: BorderStyle, borderWidth: number): void {
     switch (borderStyle) {

@@ -1,1 +1,1 @@
-export { PlaceholderImageGenerator } from './Placeholder'
+export { PlaceholderImageGenerator } from './PlaceholderImageGenerator'
