@@ -1,6 +1,6 @@
 {
   "name": "@tiny-placeholder/react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Kichul Kim",
     "email": "kichul7493@gmail.com"
@@ -27,7 +27,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@tiny-placeholder/core": "workspace:*"
+    "@tiny-placeholder/core": "^1.0.0"
   },
   "peerDependencies": {
     "react": "^18.3.1",
