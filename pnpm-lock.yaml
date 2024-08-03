@@ -8,54 +8,11 @@ importers:
 
   .: {}
 
-  examples/placeholder-image:
-    dependencies:
-      react:
-        specifier: ^18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
-      tiny-placeholder:
-        specifier: ^1.0.4
-        version: 1.0.7(react-dom@18.3.1)(react@18.3.1)
-    devDependencies:
-      '@types/react':
-        specifier: ^18.3.3
-        version: 18.3.3
-      '@types/react-dom':
-        specifier: ^18.3.0
-        version: 18.3.0
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^7.15.0
-        version: 7.18.0(@typescript-eslint/parser@7.18.0)(eslint@8.57.0)(typescript@5.5.4)
-      '@typescript-eslint/parser':
-        specifier: ^7.15.0
-        version: 7.18.0(eslint@8.57.0)(typescript@5.5.4)
-      '@vitejs/plugin-react':
-        specifier: ^4.3.1
-        version: 4.3.1(vite@5.3.5)
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-plugin-react-hooks:
-        specifier: ^4.6.2
-        version: 4.6.2(eslint@8.57.0)
-      eslint-plugin-react-refresh:
-        specifier: ^0.4.7
-        version: 0.4.9(eslint@8.57.0)
-      typescript:
-        specifier: ^5.2.2
-        version: 5.5.4
-      vite:
-        specifier: ^5.3.4
-        version: 5.3.5
-
-  examples/placeholder-image-downloader:
+  examples/react:
     dependencies:
       '@tiny-placeholder/react':
         specifier: workspace:*
-        version: link:../../packages/tiny-placeholder-react
+        version: link:../../packages/react
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -94,7 +51,20 @@ importers:
         specifier: ^5.3.4
         version: 5.3.5
 
-  packages/tiny-placeholder-core:
+  examples/vanilla:
+    dependencies:
+      '@tiny-placeholder/core':
+        specifier: workspace:*
+        version: link:../../packages/core
+    devDependencies:
+      typescript:
+        specifier: ^5.2.2
+        version: 5.5.4
+      vite:
+        specifier: ^5.3.4
+        version: 5.3.5
+
+  packages/core:
     devDependencies:
       typescript:
         specifier: ^5.2.2
@@ -106,11 +76,11 @@ importers:
         specifier: 4.0.0-beta.1
         version: 4.0.0-beta.1(typescript@5.5.4)(vite@5.3.5)
 
-  packages/tiny-placeholder-react:
+  packages/react:
     dependencies:
       '@tiny-placeholder/core':
         specifier: workspace:*
-        version: link:../tiny-placeholder-core
+        version: link:../core
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -2315,16 +2285,6 @@ packages:
   /text-table@0.2.0:
     resolution: {integrity: sha512-N+8UisAXDGk8PFXP4HAzVR9nbfmVJ3zYLAWiTIoqC5v5isinhr+r5uaO8+7r3BMfuNIufIsA7RdpVgacC2cSpw==}
     dev: true
-
-  /tiny-placeholder@1.0.7(react-dom@18.3.1)(react@18.3.1):
-    resolution: {integrity: sha512-21Yo1YxGs0zcsxxDPpT5mbDplQKp68U15OrVBAC8+FI+hZpqrhom62fFFuaoV+MG3N9tm5iRgEwGM/zt+Z5C1A==}
-    peerDependencies:
-      react: ^18.3.1
-      react-dom: ^18.3.1
-    dependencies:
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-    dev: false
 
   /to-fast-properties@2.0.0:
     resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
