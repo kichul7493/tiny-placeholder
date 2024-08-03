@@ -11,7 +11,7 @@ importers:
   examples/react:
     dependencies:
       '@tiny-placeholder/react':
-        specifier: workspace:*
+        specifier: ^1.0.0
         version: link:../../packages/react
       react:
         specifier: ^18.3.1
@@ -54,7 +54,7 @@ importers:
   examples/vanilla:
     dependencies:
       '@tiny-placeholder/core':
-        specifier: workspace:*
+        specifier: ^1.0.0
         version: link:../../packages/core
     devDependencies:
       typescript:
@@ -79,7 +79,7 @@ importers:
   packages/react:
     dependencies:
       '@tiny-placeholder/core':
-        specifier: workspace:*
+        specifier: ^1.0.0
         version: link:../core
       react:
         specifier: ^18.3.1
