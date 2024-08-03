@@ -94,7 +94,7 @@ The `PlaceholderImageDownloader` component provides an anchor (`a`) tag to downl
 
 ### [example site](https://tiny-placeholder-9ndd.vercel.app/)
 
-code here : ./examples/placholder-image-downloader
+### [example code](https://github.com/kichul7493/tiny-placeholder/tree/main/examples/placeholder-image-downloader)
 
 ## License
 
