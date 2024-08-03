@@ -22,9 +22,12 @@
   },
   "scripts": {
     "clean": "rm -rf dist",
-    "build": "pnpm clean && tsc && vite build"
+    "build": "pnpm clean && tsc && vite build",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run"
   },
   "devDependencies": {
+    "cypress": "^13.13.2",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
     "vite-plugin-dts": "4.0.0-beta.1"
