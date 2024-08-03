@@ -1,4 +1,22 @@
-import { BorderStyle, PlaceholderOptions } from '../types'
+export type BorderStyle = 'solid' | 'dashed' | 'dotted'
+
+export type Shape = 'rectangle' | 'circle' | 'triangle'
+
+export type PlaceholderOptions = {
+  canvas?: HTMLCanvasElement
+  width: number
+  height: number
+  backgroundColor: string | CanvasGradient | CanvasPattern
+  textColor: string | CanvasGradient | CanvasPattern
+  text: string
+  fontSize: number
+  fontFamily: string
+  borderWidth: number
+  borderColor: string | CanvasGradient | CanvasPattern
+  borderStyle: BorderStyle
+  borderRadius: number
+  shape: Shape
+}
 
 export abstract class Placeholder {
   protected canvas: HTMLCanvasElement

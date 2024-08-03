@@ -1,7 +1,6 @@
 import { defaultOptions } from '../constants'
-import { PlaceholderOptions } from '../types'
 import { CirclePlaceholder } from './CirclePlaceholder'
-import { Placeholder } from './Placeholder'
+import { Placeholder, PlaceholderOptions } from './Placeholder'
 import { RectanglePlaceholder } from './RectanglePlaceholder'
 import { TrianglePlaceholder } from './TrianglePlaceholder'
 

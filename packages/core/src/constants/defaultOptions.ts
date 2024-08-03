@@ -1,4 +1,4 @@
-import { PlaceholderOptions } from '../types'
+import { PlaceholderOptions } from '../core'
 
 export const defaultOptions: PlaceholderOptions = {
   width: 200,

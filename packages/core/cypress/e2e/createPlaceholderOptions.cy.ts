@@ -1,5 +1,5 @@
 import { defaultOptions } from '../../src/constants'
-import { PlaceholderOptions } from '../../src/types'
+import { PlaceholderOptions } from '../../src/core'
 import { createPlaceholderOptions } from '../../src/utils/createPlaceholderOptions'
 
 describe('CreatePlaceholderOptions Spec', () => {

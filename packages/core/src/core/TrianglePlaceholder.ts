@@ -1,5 +1,4 @@
-import { PlaceholderOptions } from '../types'
-import { Placeholder } from './Placeholder'
+import { Placeholder, PlaceholderOptions } from './Placeholder'
 
 export class TrianglePlaceholder extends Placeholder {
   constructor(options: PlaceholderOptions) {
