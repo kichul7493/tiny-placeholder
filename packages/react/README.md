@@ -1,4 +1,4 @@
-# tiny-placeholder
+# @tiny-placeholder/react
 
 ## Table of Contents
 
@@ -30,22 +30,22 @@ Both components offer the following features:
 npm:
 
 ```bash
-$ npm install tiny-placeholder
+$ npm install @tiny-placeholder/react
 ```
 
 yarn:
 
 ```bash
-$ yarn add tiny-placeholder
+$ yarn add @tiny-placeholder/react
 ```
 
 pnpm:
 
 ```bash
-$ pnpm add tiny-placeholder
+$ pnpm add @tiny-placeholder/react
 ```
 
-You can install tiny-placeholder in your project using a package manager.
+You can install @tiny-placeholder/react in your project using a package manager.
 
 Example code:
 
@@ -92,9 +92,9 @@ The `PlaceholderImage` component provides an image tag with the configured `opti
 
 The `PlaceholderImageDownloader` component provides an anchor (`a`) tag to download the generated image using the configured `options` props. You can define the download button's appearance using the `component` prop.
 
-### [example site](https://tiny-placeholder-9ndd.vercel.app/)
+### [example site](https://tiny-placeholder-example.vercel.app/)
 
-### [example code](https://github.com/kichul7493/tiny-placeholder/tree/main/examples/placeholder-image-downloader)
+### [example code](https://github.com/kichul7493/tiny-placeholder/tree/main/examples/react)
 
 ## License
 
