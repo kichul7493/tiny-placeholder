@@ -28,7 +28,7 @@
     "clean": "rm -rf dist",
     "build": "pnpm clean && tsc && vite build",
     "cypress:open": "cypress open",
-    "cypress": "cypress run"
+    "test": "cypress run"
   },
   "devDependencies": {
     "cypress": "^13.13.2",
