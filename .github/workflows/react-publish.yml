@@ -54,6 +54,9 @@ jobs:
       - name: Install dependencies 📦️
         run: pnpm install
 
+      - name: Build Core 🔨
+        run: pnpm --filter @tiny-placeholder/core build
+
       - name: Build 🔨
         run: pnpm --filter @tiny-placeholder/react build
 
