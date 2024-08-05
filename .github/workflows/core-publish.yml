@@ -23,7 +23,7 @@ jobs:
       - run: pnpm install
       - run: pnpm --filter @tiny-placeholder/core test
 
-  publish-gpr:
+  publish:
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -37,6 +37,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install -g pnpm # pnpm 설치
       - run: pnpm install
-      - run: pnpm --filter @tiny-placeholder/core test publish
+      - run: pnpm --filter @tiny-placeholder/core publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
