@@ -1,9 +1,13 @@
 {
   "name": "@tiny-placeholder/react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "Kichul Kim",
     "email": "kichul7493@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kichul7493/tiny-placeholder"
   },
   "keywords": [
     "placeholder"
