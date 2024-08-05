@@ -37,6 +37,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install -g pnpm # pnpm 설치
       - run: pnpm install
-      - run: pnpm --filter @tiny-placeholder/core publish
+      - run: pnpm --filter @tiny-placeholder/core publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
