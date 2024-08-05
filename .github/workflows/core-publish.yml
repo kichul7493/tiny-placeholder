@@ -30,13 +30,25 @@ jobs:
       contents: read
       packages: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout 🛎️
+        uses: actions/checkout@v4
+
+      - name: Use Node LTS ✨
+        uses: actions/setup-node@v4
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com/
-      - run: npm install -g pnpm # pnpm 설치
-      - run: pnpm install
-      - run: pnpm --filter @tiny-placeholder/core publish --no-git-checks
+
+      - name: Install pnpm 📦️
+        run: npm install -g pnpm # pnpm 설치
+
+      - name: Install dependencies 📦️
+        run: pnpm install
+
+      - name: Build 🔨
+        run: pnpm --filter @tiny-placeholder/core build
+
+      - name: Publish 🚀
+        run: pnpm --filter @tiny-placeholder/core publish --no-git-checks
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
