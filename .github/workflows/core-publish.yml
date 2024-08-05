@@ -21,7 +21,7 @@ jobs:
           node-version: 20
       - run: npm install -g pnpm # pnpm 설치
       - run: pnpm install
-      - run: pnpm test
+      - run: pnpm --filter @tiny-placeholder/core test
 
   publish-gpr:
     needs: build
@@ -37,6 +37,6 @@ jobs:
           registry-url: https://npm.pkg.github.com/
       - run: npm install -g pnpm # pnpm 설치
       - run: pnpm install
-      - run: pnpm publish
+      - run: pnpm --filter @tiny-placeholder/core test publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
