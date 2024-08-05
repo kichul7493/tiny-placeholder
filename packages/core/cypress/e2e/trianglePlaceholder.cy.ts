@@ -6,6 +6,7 @@ describe('TrianglePlaceholder Spec', () => {
   it('Should no options be provided, the image will be generated in the default format', async () => {
     const placeholder = new PlaceholderImageGenerator({
       shape: 'triangle',
+      backgroundColor: 'black',
     })
 
     const { width, height } = defaultOptions
@@ -29,9 +30,9 @@ describe('TrianglePlaceholder Spec', () => {
 
     const { r, g, b } = checker.getPixelColor((width - 1) / 2, 0)
 
-    expect(r).to.equal(204)
-    expect(g).to.equal(204)
-    expect(b).to.equal(204)
+    expect(r).to.equal(0)
+    expect(g).to.equal(0)
+    expect(b).to.equal(0)
   })
 
   it('Should the width, height be specified, the image will be generated with that width.', async () => {
