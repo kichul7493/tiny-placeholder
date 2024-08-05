@@ -19,9 +19,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install -g pnpm # pnpm 설치
-      - run: pnpm install
-      - run: pnpm --filter @tiny-placeholder/react test
+
+      - name: Install pnpm 📦️
+        run: npm install -g pnpm # pnpm 설치
+
+      - name: Install dependencies 📦️
+        run: pnpm install
+
+      - name: Build Core 🔨
+        run: pnpm --filter @tiny-placeholder/core build
+
+      - name: Test 🧪
+        run: pnpm --filter @tiny-placeholder/react test
 
   publish:
     needs: build
