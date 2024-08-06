@@ -44,4 +44,29 @@ export class TrianglePlaceholder extends Placeholder {
     this.ctx.lineTo(x3, y3)
     this.ctx.closePath()
   }
+
+    /**
+   * Draws the text on the placeholder.
+   * @param text - The text to draw.
+   * @param x - The x-coordinate of the text.
+   * @param y - The y-coordinate of the text.
+   * @param fontSize - The font size of the text.
+   * @param fontFamily - The font family of the text.
+   * @param color - The color of the text.
+   */
+    protected drawText(
+      text: string,
+      x: number,
+      y: number,
+      fontSize: number,
+      fontFamily: string,
+      color: string | CanvasGradient | CanvasPattern,
+    ): void {
+      this.ctx.fillStyle = color
+      this.ctx.font = `${fontSize}px ${fontFamily}`
+      this.ctx.textAlign = 'center'
+      this.ctx.textBaseline = 'middle'
+      // Multiply y by 1.2 to vertically center the text
+      this.ctx.fillText(text, x, y * 1.2)
+    }
 }

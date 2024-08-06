@@ -140,7 +140,7 @@ export abstract class Placeholder {
    * @param fontFamily - The font family of the text.
    * @param color - The color of the text.
    */
-  private drawText(
+  protected drawText(
     text: string,
     x: number,
     y: number,
