@@ -31,7 +31,7 @@
     "test": "cypress run --component"
   },
   "dependencies": {
-    "@tiny-placeholder/core": "^1.0.0"
+    "@tiny-placeholder/core": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.3.1",

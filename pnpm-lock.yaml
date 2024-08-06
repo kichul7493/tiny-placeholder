@@ -82,7 +82,7 @@ importers:
   packages/react:
     dependencies:
       '@tiny-placeholder/core':
-        specifier: ^1.0.0
+        specifier: workspace:*
         version: link:../core
       react:
         specifier: ^18.3.1
