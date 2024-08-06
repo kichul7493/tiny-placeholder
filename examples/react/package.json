@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@tiny-placeholder/react": "^1.0.0"
+    "@tiny-placeholder/react": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",

@@ -11,7 +11,7 @@ importers:
   examples/react:
     dependencies:
       '@tiny-placeholder/react':
-        specifier: ^1.0.0
+        specifier: workspace:*
         version: link:../../packages/react
       react:
         specifier: ^18.3.1
