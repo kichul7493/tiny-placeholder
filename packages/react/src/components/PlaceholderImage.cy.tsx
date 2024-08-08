@@ -1,13 +1,11 @@
+import React from 'react'
 import { PlaceholderImage } from './PlaceholderImage'
 
 describe('<PlaceholderImage />', () => {
   it('renders', () => {
-    // see: https://on.cypress.io/mounting-react
-    const alt = 'test'
+    cy.mount(<PlaceholderImage />)
 
-    cy.mount(<PlaceholderImage alt={alt} />)
-
-    cy.get('img').should('have.attr', 'alt', alt)
+    cy.get('img').should('have.attr', 'alt', 'Placeholder')
   })
 
   it('renders with custom width and height', () => {
