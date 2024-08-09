@@ -1,6 +1,7 @@
 {
   "name": "@tiny-placeholder/core",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "description": "This is a tiny library for use when you need simple placeholder images.",
   "author": {
     "name": "Kichul Kim",
     "email": "kichul7493@gmail.com"
