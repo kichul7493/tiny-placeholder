@@ -1,10 +1,10 @@
 import { defaultOptions } from '../../src/constants'
 import { CanvasImageChecker } from '../../src/test/CanvasImageChecker'
-import { PlaceholderImageGenerator } from '../../src/core/PlaceholderImageGenerator'
+import { PlaceholderFactory } from '../../src/core'
 
-describe('PlaceholderImageGenerator', () => {
+describe('PlaceholderFactory', () => {
   it('Should no options be provided, the image will be generated in the default format', async () => {
-    const placeholder = new PlaceholderImageGenerator({
+    const placeholder = new PlaceholderFactory({
       shape: 'circle',
     })
 
@@ -50,7 +50,7 @@ describe('PlaceholderImageGenerator', () => {
     const width = 500
     const height = 500
 
-    const placeholder = new PlaceholderImageGenerator({ width, height, shape: 'circle' })
+    const placeholder = new PlaceholderFactory({ width, height, shape: 'circle' })
 
     const checker = new CanvasImageChecker()
     await checker.loadImage(placeholder.getDataURL())
@@ -85,7 +85,7 @@ describe('PlaceholderImageGenerator', () => {
   it('Should the background color be specified, the image will be generated with that color.', async () => {
     const backgroundColor = 'black'
 
-    const placeholder = new PlaceholderImageGenerator({ backgroundColor })
+    const placeholder = new PlaceholderFactory({ backgroundColor })
 
     const checker = new CanvasImageChecker()
     await checker.loadImage(placeholder.getDataURL())

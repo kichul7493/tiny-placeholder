@@ -1,4 +1,4 @@
-import { PlaceholderImageGenerator, PlaceholderOptions } from '@tiny-placeholder/core'
+import { PlaceholderFactory, PlaceholderOptions } from '@tiny-placeholder/core'
 import { useState, useEffect } from 'react'
 
 interface PlaceholderImageProps {
@@ -23,7 +23,7 @@ export const PlaceholderImage = ({ options, alt = 'Placeholder' }: PlaceholderIm
   const [imageUrl, setImageUrl] = useState<string>('')
 
   useEffect(() => {
-    const canvas = new PlaceholderImageGenerator(options)
+    const canvas = new PlaceholderFactory(options)
 
     setImageUrl(canvas.getDataURL())
   }, [options])

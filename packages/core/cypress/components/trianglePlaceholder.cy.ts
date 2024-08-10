@@ -1,10 +1,10 @@
 import { defaultOptions } from '../../src/constants'
-import { PlaceholderImageGenerator } from '../../src/core/PlaceholderImageGenerator'
+import { PlaceholderFactory } from '../../src/core'
 import { CanvasImageChecker } from '../../src/test/CanvasImageChecker'
 
 describe('TrianglePlaceholder Spec', () => {
   it('Should no options be provided, the image will be generated in the default format', async () => {
-    const placeholder = new PlaceholderImageGenerator({
+    const placeholder = new PlaceholderFactory({
       shape: 'triangle',
       backgroundColor: 'black',
     })
@@ -39,7 +39,7 @@ describe('TrianglePlaceholder Spec', () => {
     const width = 300
     const height = 300
 
-    const placeholder = new PlaceholderImageGenerator({ width, height, shape: 'triangle' })
+    const placeholder = new PlaceholderFactory({ width, height, shape: 'triangle' })
 
     const checker = new CanvasImageChecker()
     await checker.loadImage(placeholder.getDataURL())
@@ -64,7 +64,7 @@ describe('TrianglePlaceholder Spec', () => {
 
     const { width, height } = defaultOptions
 
-    const placeholder = new PlaceholderImageGenerator({ backgroundColor })
+    const placeholder = new PlaceholderFactory({ backgroundColor })
 
     const checker = new CanvasImageChecker()
     await checker.loadImage(placeholder.getDataURL())

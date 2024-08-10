@@ -7,7 +7,7 @@ import { TrianglePlaceholder } from './TrianglePlaceholder'
 /**
  * Generates a placeholder image based on the provided options.
  */
-export class PlaceholderImageGenerator {
+export class PlaceholderFactory {
   private placeholder: Placeholder
 
   constructor(options: Partial<PlaceholderOptions> = {}) {

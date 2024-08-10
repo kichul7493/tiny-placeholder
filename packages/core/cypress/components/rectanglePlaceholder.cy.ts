@@ -1,10 +1,10 @@
 import { defaultOptions } from '../../src/constants'
-import { PlaceholderImageGenerator } from '../../src/core/PlaceholderImageGenerator'
+import { PlaceholderFactory } from '../../src/core'
 import { CanvasImageChecker } from '../../src/test/CanvasImageChecker'
 
 describe('RectanglePlaceholder Spec', () => {
   it('Should no options be provided, the image will be generated in the default format', async () => {
-    const placeholder = new PlaceholderImageGenerator()
+    const placeholder = new PlaceholderFactory()
 
     const { width, height } = defaultOptions
 
@@ -35,7 +35,7 @@ describe('RectanglePlaceholder Spec', () => {
     const width = 300
     const height = 300
 
-    const placeholder = new PlaceholderImageGenerator({ width, height })
+    const placeholder = new PlaceholderFactory({ width, height })
 
     const checker = new CanvasImageChecker()
     await checker.loadImage(placeholder.getDataURL())
@@ -50,7 +50,7 @@ describe('RectanglePlaceholder Spec', () => {
   it('Should the background color be specified, the image will be generated with that color.', async () => {
     const backgroundColor = 'black'
 
-    const placeholder = new PlaceholderImageGenerator({ backgroundColor })
+    const placeholder = new PlaceholderFactory({ backgroundColor })
 
     const checker = new CanvasImageChecker()
     await checker.loadImage(placeholder.getDataURL())

@@ -1,2 +1,2 @@
-export { PlaceholderImageGenerator } from './PlaceholderImageGenerator'
+export { PlaceholderFactory } from './PlaceholderFactory'
 export type { PlaceholderOptions, BorderStyle, Shape } from './Placeholder'

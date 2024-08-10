@@ -59,7 +59,7 @@ const options = createPlaceholderOptions({
   shape: 'rectangle',
 })
 
-const placeholder = new PlaceholderImageGenerator(options)
+const placeholder = new PlaceholderFactory(options)
 
 const imageSrc = placeholder.getDataURL()
 
@@ -72,7 +72,7 @@ img.src = imageSrc
 
 Use the `createPlaceholderOptions` function to generate `options` with type support.
 
-### 2. PlaceholderImageGenerator
+### 2. PlaceholderFactory
 
 This class generates images based on provided options. The getDataURL method can return the image data. This can be used in various ways where image data is needed, such as displaying the generated image using an img tag or downloading the image using an a tag.
 
