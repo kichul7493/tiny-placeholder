@@ -2,8 +2,6 @@ import { PlaceholderImageDownload } from './PlaceholderImageDownloader'
 
 describe('<PlaceholderImageDownload />', () => {
   it('renders', () => {
-    // see: https://on.cypress.io/mounting-react
-
     cy.mount(<PlaceholderImageDownload />)
 
     cy.contains('Download')

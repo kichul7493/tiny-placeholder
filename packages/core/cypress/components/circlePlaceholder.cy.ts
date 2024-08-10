@@ -1,8 +1,8 @@
 import { defaultOptions } from '../../src/constants'
-import { PlaceholderImageGenerator } from '../../src/core/PlaceholderImageGenerator'
 import { CanvasImageChecker } from '../../src/test/CanvasImageChecker'
+import { PlaceholderImageGenerator } from '../../src/core/PlaceholderImageGenerator'
 
-describe('CirclePlaceholder Spec', () => {
+describe('PlaceholderImageGenerator', () => {
   it('Should no options be provided, the image will be generated in the default format', async () => {
     const placeholder = new PlaceholderImageGenerator({
       shape: 'circle',
