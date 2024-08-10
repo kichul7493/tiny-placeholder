@@ -1,4 +1,4 @@
-import { PlaceholderImageDownload } from './PlaceholderImageDownloader'
+import { PlaceholderImageDownload } from '../../src/components/PlaceholderImageDownloader'
 
 describe('<PlaceholderImageDownload />', () => {
   it('renders', () => {

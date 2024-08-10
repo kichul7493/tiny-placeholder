@@ -1,5 +1,5 @@
 import React from 'react'
-import { PlaceholderImage } from './PlaceholderImage'
+import { PlaceholderImage } from '../../src/components/PlaceholderImage'
 
 describe('<PlaceholderImage />', () => {
   it('renders', () => {
